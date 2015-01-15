@@ -4,7 +4,8 @@ http://www.beyerbeyer.co.uk/mbctest/index.php/ctest
 
 Goto:
 Number, Four Operations, Integers, Addition.
-Select products from "My Products"
+Click on a product from "My Products"
+
 
 Click on Cart
 Click on Proceed to Checkout.
