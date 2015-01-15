@@ -1,0 +1,37 @@
+
+<?php
+
+$contents = $this->cart->contents();
+
+foreach ($contents as $item) {
+
+	
+	echo "Product: " . $item['name'] . "<br>";
+	echo "Price: " . $item['price'] . "<br>";
+	echo "Quantity: " . $item['qty'] . "<br>" . "<br>";
+	echo form_open('ctest/remove_product'); 
+	echo form_hidden('id', $item['id']);
+	echo form_submit('action', 'Remove item(s)');
+	echo form_close();
+
+}
+
+
+?>
+
+<br>
+<div>Products:</div>
+<br>
+<?php foreach ($cart_view as $product): ?>
+<?php echo form_open('ctest/add_or_update'); ?>
+<div> <?php echo $product->name; ?> </div>
+<div> <?php echo $product->price; ?> </div>
+
+
+<?php echo form_hidden('id', $product->id); ?>
+<?php echo form_submit('action', 'Add to Cart'); ?>
+<?php echo form_close(); ?>
+
+<?php endforeach; ?>
+
+<a href='ctest/destroy'>Empty Cart</a>
